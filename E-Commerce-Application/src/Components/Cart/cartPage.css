@@ -53,3 +53,14 @@
     margin: 16px 0;
     padding: 0 16px !important;
 }
+
+.table_quantity_input{
+    justify-content: center;
+    height: 50px;
+}
+
+.cart_remove_icon{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
