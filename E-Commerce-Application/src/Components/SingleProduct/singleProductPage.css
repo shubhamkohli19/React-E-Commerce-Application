@@ -1,0 +1,91 @@
+.single_product{
+    justify-content: center;
+    padding: 32px 48px;
+}
+
+.single_product_thumbnails{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 16px;
+    padding: 8px;
+}
+
+.single_product_thumbnails img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.single_product_display{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.selected_image{
+    transform: scale(1.12);
+}
+
+.single_product_details{
+    width: 35%;
+    padding: 16px 24px;
+}
+
+.single_product_title{
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+.single_product_description{
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.single_product_price{
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.quantity_title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.quantity_input{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 16px;
+}
+
+.quantity_input_button{
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    background-color: #ff8848;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.quantity_input_button:disabled{
+    opacity: 0.3;
+    cursor: default;
+}
+
+.quantity_input_count{
+    margin: 0 40px;
+    text-align: center;
+}
+
+.add_cart{
+    width: fit-content;
+    padding: 8px 18px;
+}
