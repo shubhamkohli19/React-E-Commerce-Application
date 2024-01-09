@@ -4,6 +4,7 @@ import HomePage from './Components/Home/HomePage';
 import ProductsPage from './Components/Products/ProductsPage';
 import SingleProductPage from './Components/SingleProduct/SingleProductPage';
 import CartPage from "./Components/Cart/CartPage";
+import MyOrderPage from "./Components/MyOrder/MyOrderPage";
 
 function App() {
   return (
@@ -11,10 +12,11 @@ function App() {
       <div className="app">
         <Navbar />
         <main>
-          {/* <HomePage/> */}
+          <HomePage/>
           {/* <ProductsPage/> */}
-          <SingleProductPage/>
-          <CartPage/>
+          {/* <SingleProductPage/>   */}
+          {/* <CartPage/> */}
+          {/* <MyOrderPage/> */}
         </main>
       </div>
     </>
