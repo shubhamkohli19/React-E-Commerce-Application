@@ -6,6 +6,7 @@ import SingleProductPage from './Components/SingleProduct/SingleProductPage';
 import CartPage from "./Components/Cart/CartPage";
 import MyOrderPage from "./Components/MyOrder/MyOrderPage";
 import LoginPage from "./Components/Authentication/LoginPage";
+import SignupPage from "./Components/Authentication/SignupPage";
 
 function App() {
   return (
@@ -13,12 +14,13 @@ function App() {
       <div className="app">
         <Navbar />
         <main>
-          <HomePage/>
+          {/* <HomePage/> */}
           {/* <ProductsPage/> */}
           {/* <SingleProductPage/>   */}
           {/* <CartPage/> */}
           {/* <MyOrderPage/> */}
           {/* <LoginPage/> */}
+          <SignupPage/>
         </main>
       </div>
     </>
