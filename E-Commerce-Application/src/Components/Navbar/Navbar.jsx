@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,28 +19,28 @@ const Navbar = () => {
         </form>
       </div>
       <div className="align_center navbar_links">
-        <a href="#" className="align_center">
+        <NavLink to="/" className="align_center">
           Home
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/products" className="align_center">
           Products
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/login" className="align_center">
           Log In
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/signup" className="align_center">
           Sign Up
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/myorders" className="align_center">
           My Orders
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/logout" className="align_center">
           Log Out
-        </a>
-        <a href="#" className="align_center">
+        </NavLink>
+        <NavLink to="/cart" className="align_center">
           Cart<p className="align_center cart_counts">0</p>
           
-        </a>
+        </NavLink>
       </div>
     </nav>
   );
