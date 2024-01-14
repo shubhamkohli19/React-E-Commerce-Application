@@ -1,36 +1,50 @@
 import React, { useState } from "react";
 import "./singleProductPage.css";
-import product from "../../Product.js";
 import QuantityInput from "./QuantityInput.jsx";
+import { useParams } from "react-router-dom";
+import useData from "../../hooks/useData.js";
 
 const SingleProductPage = () => {
-    const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(0);
+  const [quantity, setQuantity] = useState(1)
+  const { id } = useParams();
+  const { data: product, error } = useData(`/products/${id}`);
   return (
     <section className="align_center single_product">
-      <div className="align_center">
-        <div className="single_product_thumbnails">
-          {product.images.map((image, index) => (
-            <img src={image} key={index} className={selectedImage === index ? "selected_image" : ""} onClick={() => setSelectedImage(index)} />
-          ))}
-        </div>
+      {error && <em className="form_error">{error}</em>}
+      {product && (
+        <>
+          <div className="align_center">
+            <div className="single_product_thumbnails">
+              {product.images.map((image, index) => (
+                <img
+                  src={`http://localhost:5000/products/${image}`}
+                  key={index}
+                  className={selectedImage === index ? "selected_image" : ""}
+                  onClick={() => setSelectedImage(index)}
+                />
+              ))}
+            </div>
 
-        <img
-          src={product.images[selectedImage]}
-          alt={product.title}
-          className="single_product_display"
-        />
-      </div>
-      <div className="single_product_details">
-        <h1 className="single_product_title">{product.title}</h1>
-        <p className="single_product_description">{product.description}</p>
-        <p className="single_product_price">${product.price.toFixed(2)}</p>
-        <h2 className="quantity_title">Quantity:</h2>
-        <div className="align_center quantity_input">
-            <QuantityInput/>
-        </div>
+            <img
+              src={`http://localhost:5000/products/${product.images[selectedImage]}`}
+              alt={product.title}
+              className="single_product_display"
+            />
+          </div>
+          <div className="single_product_details">
+            <h1 className="single_product_title">{product.title}</h1>
+            <p className="single_product_description">{product.description}</p>
+            <p className="single_product_price">Rs. {(product.price.toFixed(2)) * 83}</p>
+            <h2 className="quantity_title">Quantity:</h2>
+            <div className="align_center quantity_input">
+              <QuantityInput quantity={quantity} setQuantity={setQuantity} stock={product.stock}/>
+            </div>
 
-        <button className="search_button add_cart">Add to Cart</button>
-      </div>
+            <button className="search_button add_cart">Add to Cart</button>
+          </div>
+        </>
+      )}
     </section>
   );
 };

@@ -13,7 +13,7 @@ const Routing = () => {
     <Routes>
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/products' element={<ProductsPage/>}></Route>
-        <Route path='/products/1' element={<SingleProductPage/>}></Route>
+        <Route path='/products/:id' element={<SingleProductPage/>}></Route>
         <Route path='/signup' element={<SignupPage/>}></Route>
         <Route path='/login' element={<LoginPage/>}></Route>
         <Route path='/cart' element={<CartPage/>}></Route>

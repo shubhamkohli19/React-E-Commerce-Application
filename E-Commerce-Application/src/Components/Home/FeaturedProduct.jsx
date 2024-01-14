@@ -10,9 +10,9 @@ const FeaturedProduct = () => {
     <section className='featured_products'>
         <h2>Featured Products</h2>
         <div className='align_center featured_products_list'>
-            <ProductCard image={iphone15} title="iPhone 15 PRO" rating="4.5" price="58,999"/>
-            <ProductCard image={samsungS23} title="Samsung S23 ULTRA" rating="5.0" price="65,990"/>
-            <ProductCard image={pixel8pro} title="Pixel 8 PRO" rating="4.3" price="95,990"/>
+            <ProductCard image={iphone15} title="iPhone 15 PRO" rating="4.5" price="699" featured = {true}/>
+            <ProductCard image={samsungS23} title="Samsung S23 ULTRA" rating="5.0" price="799" featured = {true}/>
+            <ProductCard image={pixel8pro} title="Pixel 8 PRO" rating="4.3" price="1200" featured = {true}/>
         </div>
     </section>
   )
