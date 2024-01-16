@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
+import userContext from "../../contexts/userContext";
+import cartContext from "../../contexts/cartContext";
 
-const Navbar = ({ user }) => {
+const Navbar = ({ cartCount }) => {
+  const user = useContext(userContext);
+  const {cart} = useContext(cartContext);
   return (
     <nav className="align_center navbar">
       <div className="align_center">
@@ -44,7 +48,7 @@ const Navbar = ({ user }) => {
               Log Out
             </NavLink>
             <NavLink to="/cart" className="align_center">
-              Cart<p className="align_center cart_counts">0</p>
+              Cart<p className="align_center cart_counts">{cart.length}</p>
             </NavLink>
           </>
         )}
