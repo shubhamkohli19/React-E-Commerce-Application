@@ -2,6 +2,8 @@
 
 **Successfully developed and implemented a feature-rich e-commerce application, showcasing proficiency in authentication, dynamic data fetching, and user-centric design.**
 
+https://react-e-commerce-application.vercel.app/
+
 * **Authentication and Authorization:**
    Implemented a secure login process using the authentication endpoint using JWT. Successfully saved login tokens for authorization purposes, ensuring a secure and authenticated user experience.
 * **Protected Home Page:**
