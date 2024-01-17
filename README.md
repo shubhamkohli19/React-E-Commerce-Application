@@ -4,6 +4,8 @@
 
 https://react-e-commerce-application.vercel.app/
 
+# Features
+
 * **Authentication and Authorization:**
    Implemented a secure login process using the authentication endpoint using JWT. Successfully saved login tokens for authorization purposes, ensuring a secure and authenticated user experience.
 * **Protected Home Page:**
@@ -22,3 +24,16 @@ https://react-e-commerce-application.vercel.app/
   Demonstrated problem-solving skills by successfully completing a multi-step assignment involving user authentication, dynamic data fetching, and complex user interactions.
 * **Attention to Detail:**
   Paid attention to user experience by implementing features like search, filtering, and a visually appealing shopping cart interface.
+
+# Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* React
+* React-Router-Dom
+* Zod
+* Toast
+* JWT Authentication/Authorization
+* Node.js
+* MongoDB
