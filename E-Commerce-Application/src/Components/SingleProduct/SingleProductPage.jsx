@@ -4,6 +4,7 @@ import QuantityInput from "./QuantityInput.jsx";
 import { useParams } from "react-router-dom";
 import useData from "../../hooks/useData.js";
 import cartContext from "../../contexts/cartContext.js";
+import config from "../../config.json"
 
 const SingleProductPage = () => {
   const { addToCart } = useContext(cartContext);
@@ -20,7 +21,7 @@ const SingleProductPage = () => {
             <div className="single_product_thumbnails">
               {product.images.map((image, index) => (
                 <img
-                  src={`http://localhost:5000/products/${image}`}
+                  src={`${config.backendURL}/products/${image}`}
                   key={index}
                   className={selectedImage === index ? "selected_image" : ""}
                   onClick={() => setSelectedImage(index)}

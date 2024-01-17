@@ -2,6 +2,7 @@ import React from "react";
 import "./productsSidebar.css";
 import { NavLink } from "react-router-dom";
 import useData from "../../hooks/useData";
+import config from "../../config.json"
 
 const ProductsSidebar = ({ sidebar }) => {
   const {data: categories, error} = useData("/category")
@@ -19,7 +20,7 @@ const ProductsSidebar = ({ sidebar }) => {
             <div className="align_center">
               <div>
                 <img
-                  src={`http://localhost:5000/category/${category.image}`}
+                  src={`${config.backendURL}/category/${category.image}`}
                   alt=""
                 />
               </div>
