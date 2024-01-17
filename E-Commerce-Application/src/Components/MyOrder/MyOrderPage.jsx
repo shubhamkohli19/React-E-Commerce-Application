@@ -3,7 +3,7 @@ import Table from "../Common/Table";
 import useData from './../../hooks/useData';
 
 const MyOrderPage = () => {
-  const { data: orders, error } = useData("/order");
+  const { data: orders } = useData("/order");
   const getProductString = order => {
     const productStringArr = order.products.map(p => `${p.product.title}(${p.quantity})`)
     return productStringArr.join(", ")

@@ -3,7 +3,6 @@ import "./singleProductPage.css";
 import QuantityInput from "./QuantityInput.jsx";
 import { useParams } from "react-router-dom";
 import useData from "../../hooks/useData.js";
-import userContext from "../../contexts/userContext.js";
 import cartContext from "../../contexts/cartContext.js";
 
 const SingleProductPage = () => {
