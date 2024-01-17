@@ -2,7 +2,9 @@
 
 **StellarShop : A successfully developed and implemented a feature-rich e-commerce application, showcasing proficiency in authentication, dynamic data fetching, and user-centric design.**
 
-https://react-e-commerce-application.vercel.app/
+Link to the Live Project - https://react-e-commerce-application.vercel.app/
+
+Link to the Backend - https://stellarshop-backend.onrender.com/
 
 # Features
 
